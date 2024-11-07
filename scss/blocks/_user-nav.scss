@@ -1,0 +1,32 @@
+.user-nav {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+
+    &--mobile {
+        display: none;
+
+        @include tablet {
+            display: flex;
+            margin-left: auto;  
+        }
+
+        @include mobile-s {
+            display: none;
+        }
+    }
+
+    &__cart {
+        position: relative;
+
+        &-counter {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            font-family: $font-family-base;
+            font-size: 12px;
+            line-height: 14px;
+        }
+    }
+}

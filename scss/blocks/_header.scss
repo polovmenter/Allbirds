@@ -1,0 +1,19 @@
+.header {
+    position: relative;
+    background-color: $color-light;
+    padding: 15px 30px;
+
+    &__logo {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        @include tablet {
+            position: relative;
+            left: 0;
+            top: 0;
+            transform: translate(0, 0);
+        }
+    }
+}

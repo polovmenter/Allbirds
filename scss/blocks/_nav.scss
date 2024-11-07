@@ -1,0 +1,47 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px;
+
+    &__list {
+        display: flex;
+        align-items: center;
+        column-gap: 15px;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__item {
+
+        &-link {
+            --bottom-line-width: 0%;
+
+            position: relative;
+            padding: 10px;
+            font-family: $font-family-base;
+            font-size: 12px;
+            line-height: 1.75;
+            letter-spacing: 1.7px;
+            text-transform: uppercase;
+            color: $color-dark;
+
+            @include hover {
+                --bottom-line-width: 100%
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: var(--bottom-line-width);
+                height: 1px;
+                background-color: currentColor;
+                transition: width $transition-duration;
+            }
+        }
+    }
+}
