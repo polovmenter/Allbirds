@@ -3,6 +3,14 @@
     background-color: $color-light;
     padding: 15px 30px;
 
+    @include tablet {
+        padding-block: 11px;
+    }
+
+    @include mobile {
+        padding-inline: 15px;
+    }
+
     &__logo {
         position: absolute;
         left: 50%;

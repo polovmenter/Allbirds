@@ -1,0 +1,19 @@
+.button {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 2px;
+    color: $color-dark;
+    padding-block: 16px;
+    border-radius: 2px;
+    background-color: $color-light;
+    text-transform: uppercase;
+    text-align: center;
+    border: 1px solid $color-light;
+
+    @include hover {
+        color: $color-light;
+        background-color: transparent;
+    }
+}
