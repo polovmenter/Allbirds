@@ -16,4 +16,15 @@
         color: $color-light;
         background-color: transparent;
     }
+
+    &--dark {
+        color: $color-light;
+        background-color: $color-dark;
+
+        @include hover {
+            color: $color-dark;
+            background-color: transparent;
+            border-color: currentColor;
+        }
+    }
 }
