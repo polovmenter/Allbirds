@@ -1,0 +1,169 @@
+.favorites {
+    padding-block: 120px 140px;
+
+    @include desktop {
+        padding-block: 80px 100px;
+    }
+
+    @include desktop {
+        padding-block: 60px 80px;
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    &__title {
+        text-align: center;
+    }
+
+    &__tabs {
+        display: flex;
+        flex-direction: column;
+        row-gap: 34px;
+
+        &-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 72px;
+            border-bottom: 2px solid #D3D4D5;
+
+            @include tablet {
+                column-gap: 50px;
+            }
+
+            @include mobile {
+                column-gap: 10px;
+            }
+        }
+
+        &-underline {
+            position: absolute;
+            border-bottom: 2px solid $color-dark;
+            transition-duration: 0.6s;
+        }
+
+        &-items {
+            display: none;
+            justify-content: space-between;
+            column-gap: 24px;
+
+            @include tablet {
+                flex-wrap: wrap;
+                row-gap: 24px;
+                justify-content: center;
+            }
+
+            &.active {
+                display: flex;
+                animation: appear 0.6s linear forwards;
+            }
+        }
+
+        &-button {
+            padding: 10px 30px;
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            background-color: transparent;
+
+            @include mobile {
+                padding-inline: 20px;
+            }
+
+            @include mobile-s {
+                padding-inline: 10px;
+            }
+
+            &.active {
+                font-weight: 700;
+            }
+        }
+
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        row-gap: 18px;
+        max-width: 396px;
+        width: 100%;
+
+        @include tablet {
+            max-width: 330px;
+            row-gap: 12px;
+        }
+
+        &-buttons {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 276px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            row-gap: 12px;
+
+            @include desktop {
+                max-width: 230px;
+            }
+        }
+
+        &-image {
+            width: 100%;
+            height: auto;
+        }
+
+        &-content {
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+            padding-inline: 30px;
+
+            @include tablet {
+                row-gap: 5px;
+                padding-inline: 20px
+            }
+
+            @include mobile {
+                padding-inline: 15px
+            }
+        }
+
+        &-title {
+            @include fluid-text(18, 22);
+
+            line-height: 1.3;
+            font-weight: 700;
+            width: 100%;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #D3D4D5;
+
+            @include tablet {
+                padding-bottom: 5px;
+            }
+        }
+
+        &-description {
+            display: flex;
+            align-items: center;
+            column-gap: 12px;
+        }
+
+        &-text {
+            font-size: 14px;
+            line-height: 1.4;
+            letter-spacing: 0.4px;
+        }
+    }
+
+    &__image-wrapper {
+        position: relative;
+    }
+
+}
