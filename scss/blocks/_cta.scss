@@ -1,0 +1,109 @@
+.cta {
+    padding-block: 50px;
+    text-align: center;
+
+    @include mobile {
+        padding-block: 40px;
+    }
+
+    &__inner {
+        --container-width: 800px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 50px;
+
+        @include desktop {
+            row-gap: 30px;
+        }
+
+        @include mobile {
+            row-gap: 15px;
+        }
+    }
+
+    &__heading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 34px;
+
+        @include desktop {
+            row-gap: 20px;
+        }
+
+        @include mobile {
+            row-gap: 15px;
+        }
+    }
+
+    &__text {
+       @include fluid-text(12, 16);        
+
+        line-height: 1.5;
+
+        @include desktop {
+            max-width: 660px;
+        }
+
+        @include mobile {
+            max-width: 550px;
+        }
+    }
+
+    &__content {
+        max-width: 710px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px; 
+    }
+
+    &__form {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        column-gap: 12px;
+
+        &-input {
+            width: 100%;
+            padding: 15px 64px;
+            border: none;
+            border-bottom: 2px solid $color-dark;
+
+            @include mobile {
+                padding-inline: 40px;
+            }
+
+            @include mobile-s {
+                padding-inline: 25px;
+            }
+
+            &::placeholder {
+                font-size: 14px;
+                line-height: 1;
+                opacity: 0.3;
+            }
+        }
+
+        &-button {
+            padding: 15px 20px;
+            white-space: nowrap;
+        }
+    }
+
+    &__note {
+        @include fluid-text(12, 14);
+
+        line-height: 1;
+        color: #74797C;
+
+        &-link {
+            font-size: inherit;
+            line-height: inherit;
+            color: inherit;
+            text-decoration: underline;
+        }
+    }
+}
