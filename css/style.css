@@ -107,6 +107,16 @@ button {
     transform: translateY(0);
   }
 }
+@keyframes slide-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 .nav {
   display: flex;
   justify-content: space-between;
@@ -387,6 +397,18 @@ button {
   row-gap: 18px;
   max-width: 396px;
   width: 100%;
+}
+@media (hover: hover) {
+  .favorites__item:hover .favorites__item-button:nth-child(1) {
+    animation: slide-bottom 0.3s linear forwards;
+  }
+  .favorites__item:hover .favorites__item-button:nth-child(2) {
+    animation: slide-bottom 0.3s linear 0.1s forwards;
+  }
+  .favorites__item-button {
+    opacity: 0;
+    transform: translateY(100%);
+  }
 }
 @media (max-width: 1025px) {
   .favorites__item {
