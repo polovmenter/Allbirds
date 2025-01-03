@@ -7,7 +7,11 @@
     }
 
     @include mobile {
-        padding-bottom: 80px;
+        padding-bottom: 60px;
+    }
+
+    @include mobile-s {
+        padding-bottom: 40px;
     }
 
     &__inner {
@@ -83,6 +87,10 @@
 
         @include mobile {
             max-width: 150px;
+        }
+
+        &--large {
+            max-width: 100%;
         }
     }
 }

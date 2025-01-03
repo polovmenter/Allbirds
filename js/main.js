@@ -2,6 +2,25 @@ const tabsNav = document.querySelectorAll(".favorites__tabs-button")
 const tabsContent = document.querySelectorAll(".favorites__tabs-items")
 const underline = document.querySelector(".favorites__tabs-underline")
 
+const slider = new Swiper(".slider", {
+    navigation: {
+        prevEl: '.slider__button-prev',
+        nextEl: '.slider__button-next'
+    },
+
+    slidesPerView: 1,
+    spaceBetween: 24,
+
+    breakpoints: {
+        620: {
+            slidesPerView: 2
+        },
+        980: {
+            slidesPerView: 3
+        }
+    }
+})
+
 tabsNav.forEach(function (item) {
     item.addEventListener("click", function () {
         if (!item.classList.contains("active")) {

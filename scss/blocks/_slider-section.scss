@@ -1,0 +1,20 @@
+.slider-section {
+    padding-bottom: 120px;
+
+    @include tablet {
+        padding-bottom: 80px;
+    }
+
+    @include mobile {
+        padding-bottom: 60px;
+    }
+
+    @include mobile-s {
+        padding-bottom: 40px;
+    }
+
+    &__title {
+        text-align: left;
+        margin-bottom: 24px;
+    }
+}
