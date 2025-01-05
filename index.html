@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Allbirds</title>
+    <title>Allbirds</title> 
 </head>
 
 <body>
@@ -51,6 +51,35 @@
             </button>
         </nav>
     </header>
+    <div class="mobile-menu">
+        <div class="mobile-menu__body">
+            <button class="mobile-menu__close-button">
+                <span class="visually-hidden">close menu</span>
+            </button>
+            <nav class="mobile-menu__nav">
+                <ul class="mobile-menu__list">
+                    <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Men</a></li>
+                    <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Women</a></li>
+                    <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">New Arrivals</a></li>
+                    <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Sustainability</a></li>
+                    <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Stores</a></li>
+                    <li class="mobile-menu__item">
+                        <ul class="user-nav">
+                            <li class="user-nav__item"><a class="user-nav__link" href="#"><img src="./images/icons/user.svg" alt="user" width="25" height="25" loading="lazy"></a></li>
+                            <li class="user-nav__item"><a class="user-nav__link" href="#"><img src="./images/icons/help.svg" alt="help" width="25" height="25" loading="lazy"></a></li>
+                            <li class="user-nav__item user-nav__cart">
+                                <a class="user-nav__link" href="#">
+                                    <img src="./images/icons/cart.svg" alt="cart" width="34" height="31" loading="lazy">
+                                    <span class="user-nav__cart-counter">0</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="mobile-menu__overlay"></div>
+    </div>
     <main class="main">
         <section class="first-screen">
             <div class="first-screen__inner">
@@ -245,8 +274,8 @@
                 <h2 class="slider-section__title title">Shop The Collections</h2>
             </div>
             <div class="slider-wrapper">
-                <div class="slider__button-next"></div>
                 <div class="slider__button-prev"></div>
+                <div class="slider__button-next"></div>
                 <div class="slider swiper"> 
                     <div class="swiper-wrapper">
                         <div class="slider__item swiper-slide">
@@ -324,8 +353,8 @@
                 <h2 class="slider-section__title title">New Arrivals</h2>
             </div>
             <div class="slider-wrapper">
-                <div class="slider__button-next"></div>
                 <div class="slider__button-prev"></div>
+                <div class="slider__button-next"></div>
                 <div class="slider swiper"> 
                     <div class="swiper-wrapper">
                         <div class="slider__item swiper-slide">
@@ -473,7 +502,7 @@
                 </div>
                 <div class="cta__content">
                     <form class="cta__form" action="#">
-                        <input class="cta__form-input" type="email" name="email" placeholder="Enter Your Email Address">
+                        <input class="cta__form-input" type="email" name="email" autocomplete="on" placeholder="Enter Your Email Address">
                         <button class="cta__form-button button button--dark">Sign Up</button>
                     </form>
                     <p class="cta__note">Note: You can opt-out at any time. See our <a class="cta__note-link" href="#">Privacy Policy</a> and <a class="cta__note-link" href="#">Terms</a>.</p>

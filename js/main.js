@@ -1,6 +1,9 @@
 const tabsNav = document.querySelectorAll(".favorites__tabs-button")
 const tabsContent = document.querySelectorAll(".favorites__tabs-items")
 const underline = document.querySelector(".favorites__tabs-underline")
+const burgerButton = document.querySelector(".burger-button")
+const closeButton = document.querySelector(".mobile-menu__close-button")
+const mobileMenu = document.querySelector(".mobile-menu")
 
 const slider = new Swiper(".slider", {
     navigation: {
@@ -19,6 +22,16 @@ const slider = new Swiper(".slider", {
             slidesPerView: 3
         }
     }
+})
+
+burgerButton.addEventListener("click", () => {
+    mobileMenu.classList.add("mobile-menu--open")
+    document.body.style.overflow = "hidden"
+})
+
+closeButton.addEventListener("click", () => {
+    mobileMenu.classList.remove("mobile-menu--open")
+     document.body.style.overflow = "visible"
 })
 
 tabsNav.forEach(function (item) {
